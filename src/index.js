@@ -5,8 +5,6 @@ const app = express();
 
 connectDB();
 
-app.get('/', (req,res)=>{
-    res.status(200).send("ok!!");
-})
+app.use('/api',require('./controllers/controller'))
 
 app.listen(3000);

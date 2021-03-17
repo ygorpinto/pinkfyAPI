@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Data = new mongoose.Schema({
+const DataSchema = new mongoose.Schema({
     name: {
         type: String,
         require:true
@@ -15,5 +15,13 @@ const Data = new mongoose.Schema({
         type: String,
         required: true,
         select: false,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
     }
-})
+});
+
+const Data = new mongoose.model('Data',DataSchema); 
+
+module.exports = Data;
