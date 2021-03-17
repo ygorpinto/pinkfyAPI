@@ -1,13 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const DataSchema = new mongoose.Schema({
     name: {
         type: String,
-        require:true
+        required:true
     },
     email: {
         type: String,
-        require:true,
+        required:true,
         unique:true,
         lowercase:true
     },
@@ -22,6 +22,6 @@ const DataSchema = new mongoose.Schema({
     }
 });
 
-const Data = new mongoose.model('Data',DataSchema); 
+const Data = mongoose.model('Data',DataSchema); 
 
 module.exports = Data;
