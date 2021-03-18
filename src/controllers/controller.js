@@ -1,9 +1,7 @@
-const express = require('express');
-
-const Data = require('../data/data');
+import express from 'express';
+import Data from '../data/data.js';
 
 const router = express.Router();
-
 
 router.get('/all', async (req,res) => {
     const data = await Data.find();
@@ -21,4 +19,4 @@ router.post('/add', async (req,res) => {
 });
 
 
-module.exports = router;
+export default router;
