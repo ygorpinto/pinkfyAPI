@@ -9,7 +9,7 @@ const connectDB = async () => {
     await mongoose.connect(MONGOURI,{ 
         useUnifiedTopology: true, 
         useNewUrlParser: true });
-    console.log('db connected !');
+    console.log('db connected..');
 };
 
 export default connectDB;
